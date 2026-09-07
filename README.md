@@ -1,5 +1,5 @@
 # ml_intern_cognifyz
-# 🍽️ Restaurant Rating Prediction using Machine Learning
+# Task 1 : 🍽️ Restaurant Rating Prediction using Machine Learning
 
 ## 📌 Project Overview
 
@@ -136,3 +136,161 @@ Among the evaluated models, **Random Forest Regression** performed the best with
 The project demonstrates the complete machine learning workflow, including data preprocessing, feature selection, model training, evaluation, comparison, visualization, and feature importance analysis.
 
 ---
+# Task 2: Restaurant Recommendation System
+
+## Overview
+
+This project was completed as part of the Machine Learning Internship at Cognifyz Technologies.
+
+The objective of this task is to develop a restaurant recommendation system that provides personalized restaurant recommendations based on user preferences such as cuisine and price range.
+
+A content-based filtering approach is used to identify restaurants that are similar to the user's preferred criteria.
+
+---
+
+## Objective
+
+To create a restaurant recommendation system based on user preferences and recommend restaurants that closely match the user's selected cuisine and price range.
+
+---
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Google Colab
+
+---
+
+## Dataset
+
+The project uses a restaurant dataset containing information such as:
+
+- Restaurant Name
+- Cuisines
+- City
+- Price Range
+- Aggregate Rating
+- Votes
+
+---
+
+## Data Preprocessing
+
+The following preprocessing steps were performed:
+
+1. Loaded the restaurant dataset.
+2. Checked for missing values.
+3. Removed duplicate records.
+4. Selected relevant features required for recommendation.
+5. Converted cuisine information into lowercase text.
+6. Prepared a combined content feature using cuisine, city, and price range.
+
+---
+
+## Recommendation Criteria
+
+The recommendation system uses the following user preferences:
+
+- Cuisine Preference
+- Price Range
+
+These criteria are used to identify restaurants that are most relevant to the user's requirements.
+
+---
+
+## Recommendation Approach
+
+A content-based filtering approach was implemented.
+
+### TF-IDF Vectorization
+
+TF-IDF (Term Frequency-Inverse Document Frequency) was used to convert the textual restaurant content into numerical feature vectors.
+
+### Cosine Similarity
+
+Cosine similarity was used to measure the similarity between the user's preferences and the restaurants in the dataset.
+
+Restaurants with higher similarity scores are considered more relevant to the user's preferences.
+
+---
+
+## Recommendation Process
+
+The recommendation system follows these steps:
+
+1. Accept user preferences.
+2. Create a preference representation using cuisine and price range.
+3. Convert the preferences into a TF-IDF vector.
+4. Calculate cosine similarity with all restaurants.
+5. Rank restaurants according to their similarity scores.
+6. Return the top recommended restaurants.
+
+---
+
+## Sample User Testing
+
+A sample user preference was provided to test the recommendation system.
+
+**Cuisine Preference:** North Indian
+
+**Price Range:** 2
+
+The system generated the top 5 restaurants matching the user's preferences.
+
+The recommendations include:
+
+- Restaurant Name
+- Cuisine
+- City
+- Price Range
+- Aggregate Rating
+- Similarity Score
+
+---
+
+## Recommendation Quality Evaluation
+
+The recommendation system was evaluated using:
+
+- Number of cuisine matches
+- Number of price-range matches
+- Average similarity score
+
+These measures help determine how closely the recommended restaurants match the sample user's preferences.
+
+---
+
+## Visualization
+
+A bar chart was created to visualize the similarity scores of the top recommended restaurants.
+
+The visualization makes it easier to compare the relevance of the recommended restaurants.
+
+---
+
+## Key Features
+
+- Personalized restaurant recommendations
+- Cuisine-based filtering
+- Price-range consideration
+- TF-IDF text vectorization
+- Cosine similarity
+- Recommendation quality evaluation
+- Similarity score visualization
+
+---
+
+## Conclusion
+
+A content-based restaurant recommendation system was successfully developed using user preferences such as cuisine and price range.
+
+TF-IDF vectorization and cosine similarity were used to identify restaurants that closely match the user's preferences. The system was tested using sample preferences and evaluated based on cuisine matching, price-range matching, and similarity scores.
+
+Overall, the project demonstrates how content-based filtering can be applied to provide personalized restaurant recommendations.
+
+---
+
