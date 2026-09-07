@@ -293,4 +293,132 @@ TF-IDF vectorization and cosine similarity were used to identify restaurants tha
 Overall, the project demonstrates how content-based filtering can be applied to provide personalized restaurant recommendations.
 
 ---
+# Task 3: Cuisine Classification
+
+## Overview
+
+This project was completed as part of the Machine Learning Internship at Cognifyz Technologies.
+
+The objective of this task is to develop a machine learning model that classifies restaurants based on their primary cuisine.
+
+Two classification algorithms were implemented and evaluated:
+- Logistic Regression
+- Random Forest Classifier
+
+## Objective
+
+To develop a machine learning classification model capable of predicting the primary cuisine of a restaurant using available restaurant-related features.
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Google Colab
+
+## Dataset
+
+The project uses a restaurant dataset containing information such as:
+
+- Restaurant Name
+- Cuisines
+- City
+- Average Cost for two
+- Price range
+- Votes
+- Has Table booking
+- Has Online delivery
+- Aggregate rating
+
+## Data Preprocessing
+
+The following preprocessing steps were performed:
+
+1. Loaded the restaurant dataset.
+2. Checked for missing values.
+3. Checked for duplicate records.
+4. Filled missing cuisine values with `Unknown`.
+5. Extracted the first listed cuisine as the `Primary Cuisine`.
+6. Selected the top 10 most frequent cuisines for classification.
+7. Selected relevant numerical and categorical features.
+8. Applied One-Hot Encoding to categorical features.
+9. Split the dataset into training and testing sets using an 80:20 ratio.
+
+## Target Variable
+
+The target variable is:
+
+`Primary Cuisine`
+
+Since restaurants may have multiple cuisines, the first listed cuisine was used as the primary cuisine for classification.
+
+The classification was limited to the top 10 cuisines based on their frequency in the dataset.
+
+## Features Used
+
+### Numerical Features
+- Average Cost for two
+- Price range
+- Votes
+- Aggregate rating
+
+### Categorical Features
+- Has Table booking
+- Has Online delivery
+- City
+
+## Machine Learning Models
+
+### 1. Logistic Regression
+
+Logistic Regression was trained as one of the classification models.
+
+Performance:
+
+- Accuracy: **43.5%**
+- Precision: **29.8%**
+- Recall: **43.5%**
+
+### 2. Random Forest Classifier
+
+Random Forest was implemented as a second classification model.
+
+Performance:
+
+- Accuracy: **41.2%**
+- Precision: **36.6%**
+- Recall: **41.2%**
+
+## Model Comparison
+
+| Model | Accuracy | Precision | Recall |
+|---|---:|---:|---:|
+| Logistic Regression | 43.5% | 29.8% | 43.5% |
+| Random Forest | 41.2% | 36.6% | 41.2% |
+
+Logistic Regression achieved the higher overall accuracy and recall among the tested models, while Random Forest achieved higher precision.
+
+## Performance Analysis
+
+The classification performance was analyzed across individual cuisines using:
+
+- Precision
+- Recall
+- F1-score
+
+A confusion matrix was also generated to identify correct and incorrect predictions between different cuisine categories.
+
+A bar chart was created to visualize the F1-score performance across cuisines.
+
+## Challenges and Potential Biases
+
+- Restaurants may belong to multiple cuisines, but only the first listed cuisine was used as the primary cuisine.
+- The classification was limited to the top 10 cuisines.
+- Some cuisines have significantly fewer training examples than others.
+- Similar cuisines may have overlapping restaurant characteristics.
+- The available features may not provide enough information to clearly distinguish between cuisines.
+- City, price range, ratings, and other restaurant characteristics can influence classification results.
+- Less frequent cuisines were excluded, which can limit the model
 
